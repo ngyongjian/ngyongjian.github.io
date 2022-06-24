@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ng Yong Jian</title>
+    <!-- REMIXICON -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- !BOX ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <!-- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!-- MY STYLES -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="./index.html" class="navbar_logo">
+                <img src="./Images/Logo.png" class="navbar_logo-image" alt="logo" height="70" width="140">
+            </a>
+            <div class="navbar_menu" id="navbar_menu">
+                <ul class="navbar_list">
+                    <li class="navbar_list-item">
+                        <a href="#home" class="navbar_list-link">Home</a>
+                    </li>
+                    <li class="navbar_list-item">
+                        <a href="#aboutme" class="navbar_list-link">About Me</a>
+                    </li>
+                    <li class="navbar_list-item">
+                        <a href="#recentprojects" class="navbar_list-link">Recent Projects</a>
+                    </li>
+                    <li class="navbar_list-item">
+                        <a href="#contactme" class="navbar_list-link">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar_btn">
+                <button class="btn menu-toggle-icon" id="menu-toggle-icon">
+                    <i class="ri-bar-chart-horizontal-line icon menu-icon">
+                    </i>
+                    <i class="ri-close-line icon close-icon">
+                    </i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="home_container container">
+                <h1 class="home_title title title-main">
+                    Hi, I'm Ng Yong Jian.
+                </h1>
+                <picture class="home_image">
+                    <source media="(min-width:768px)" srcset="./Images/Profile.png" width="300" height="375">
+                    <img src="./Images/Profile.png" alt="" width="260" height="330">
+                </picture>
+                <h3 class="home_subtitle subtitle-main">
+                    DDP in Computer Science and Economics <br> Nanyang Technological University, Singapore
+                </h3>
+            </div>
+        </section>
+        <!-- About Me -->
+        <section class="aboutme" id="aboutme">
+            <div class="container">
+                <div class="heading-group">
+                    <span class="title title-small">Who am I?</span>
+                    <h5 class="title title-large">About Me</h5>
+                </div>
+                <div class="aboutme-description">
+                    <p>
+                        <span class="italic bold">Hi, I'm Yong Jian.</span> I am in my sophomore year studying Computer Science and Economics (Double Degree) at NTU Singapore. My interest mainly lies in the domain of Data Science and Web Development.
+                        In the near future, I will be exploring the field of Competitive Programming and High-Performance Computing.
+                    </p>
+                </div>
+                <div class="tech-stack d-grid">
+                    <div class="tech-stack-item">
+                        <i class='bx bxl-c-plus-plus icon'></i>
+                    </div>
+                    <div class="tech-stack-item">
+                        <i class='bx bxl-python icon'></i>
+                    </div>
+                    <div class="tech-stack-item">
+                        <i class='bx bxl-html5 icon'></i>
+                    </div>
+                    <div class="tech-stack-item">
+                        <i class='bx bxl-css3 icon'></i>
+                    </div>
+                    <div class="tech-stack-item">
+                        <i class='bx bxl-javascript'></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Recent Projects -->
+        <section class="recent-projects" id="recentprojects">
+            <div class="container">
+                <div class="heading-group">
+                    <span class="title title-small">Portfolio</span>
+                    <h5 class="title title-large">Recent Projects</h5>
+                </div>
+                <div class="portfolio-cards d-grid">
+                    <a href="https://github.com/ngyongjian/sc1015_miniproject" target=”_blank” class="portfolio-card portfolio-card-1">
+                        <div class="card-image">
+                            <img src="./Images/sc1015.png" alt="">
+                        </div>
+                        <div class="card-heading">
+                            <h5 class="card-title">Prediction on Severity of Road Accidents</h5>
+                            <span class="card-subtitle">Data Science</span>
+                        </div>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1H26ODtzDSA9zIMZ4oUqrtLmj7R8IgpaM?usp=sharing" target=”_blank” class="portfolio-card portfolio-card-2">
+                        <div class="card-image">
+                            <img src="./Images/mstr.png" alt="">
+                        </div>
+                        <div class="card-heading">
+                            <h5 class="card-title">Exploration on Cryptocurrency Brokerage Firm Dataset</h5>
+                            <span class="card-subtitle">Business Intelligence</span>
+                        </div>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1MSPUZu5aIpXth-5HNi4-Rq4UNegpF8L3?usp=sharing" target=”_blank” class="portfolio-card portfolio-card-3">
+                        <div class="card-image">
+                            <img src="./Images/ecc.png" alt="">
+                        </div>
+                        <div class="card-heading">
+                            <h5 class="card-title">Sustainability in the Retail Sector</h5>
+                            <span class="card-subtitle">Economics</span>
+                        </div>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/11sSPd8n5ZtT0faxjLvTT7E0E37VARPfe?usp=sharing" target=”_blank” class="portfolio-card portfolio-card-4">
+                        <div class="card-image">
+                            <img src="./Images/escendo.png" alt="">
+                        </div>
+                        <div class="card-heading">
+                            <h5 class="card-title">Table State Indicator</h5>
+                            <span class="card-subtitle">Electronics</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Me -->
+        <section class="contactme" id="contactme">
+            <div class="container">
+                <div class="heading-group">
+                    <span class="title title-small">Get in Touch</span>
+                    <h5 class="title title-large">Contact Me</h5>
+                </div>
+                <div class="contactme-description">
+                    <p>
+                        If you would like to reach out to me, just drop me an email at <span class="bold">yongjianng02@gmail.com</span>. I will get back to you as soon as possible.
+                    </p>
+                </div>
+                <div class="btn-group">
+                    <a href="mailto:yongjianng02@gmail.com" target="_blank" class="emailme-btn btn btn-text  btn-transparent">Email Me</a>
+                    <a href="#toBeUpdated" class="getmycv-btn btn-text btn btn-transparent">Get My CV</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-group">
+                <a href="#home" class="footer_logo">
+                    <img src="./Images/Logo.png" class="footer_logo-image" alt="logo" height="50" width="100">
+                </a>
+                <p class="footer-description">Built from scratch by me（っ＾▿＾）❤</p>
+                <ul class="footer_list">
+                    <li class="footer_list-item">
+                        <a href="https://www.facebook.com/yjng02" target="_blank" class="footer_list-link">
+                            <i class="ri-facebook-circle-fill"></i>
+                        </a>
+                    </li>
+                    <li class="footer_list-item">
+                        <a href="https://www.instagram.com/n.yongjian/" target="_blank" class="footer_list-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </li>
+                    <li class="footer_list-item">
+                        <a href="https://www.linkedin.com/in/ng-yong-jian-868050243/" target="_blank" class="footer_list-link">
+                            <i class="ri-linkedin-box-fill"></i>
+                        </a>
+                    </li>
+                    <li class="footer_list-item">
+                        <a href="https://github.com/ngyongjian" target="_blank" class="footer_list-link">
+                            <i class="ri-github-fill"></i>
+                        </a>
+                    </li>
+                </ul>
+                <span class="footer-copyright">&copy; 2022 Ng Yong Jian. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+    <!-- MY JS -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
