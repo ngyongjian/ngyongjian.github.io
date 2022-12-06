@@ -1,0 +1,522 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Quicksand:wght@300&display=swap');
+
+/* Base Variables */
+
+:root {
+    --color-0: #212529;
+    --color-1: #343A40;
+    --color-2: #495057;
+    --color-3: #6C757D;
+    --color-4: #ADB5BD;
+    --color-5: #CED4DA;
+    --color-6: #DEE2E6;
+    --color-7: #E9ECEF;
+    --title-font: 'Fira Sans', sans-serif;
+    --body-font: 'Quicksand', sans-serif;
+}
+
+
+/* Base Styles */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+.title {
+    font-family: var(--title-font);
+    color: var(--color-5);
+    letter-spacing: 1px;
+    font-size: 3.6rem;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background-color: var(--color-0);
+    color: var(--color-4);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button {
+    font: inherit;
+    background-color: transparent;
+    border: none;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 1000;
+}
+
+
+/* Header */
+
+.container {
+    margin-inline: auto;
+    padding-inline: auto;
+}
+
+.header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    background-color: var(--color-0);
+    transition: padding .25s;
+}
+
+.header.active {
+    padding-top: 1rem;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar_logo {
+    margin-right: 2.5rem;
+    margin-left: 2rem;
+}
+
+.navbar_logo-image {
+    min-width: 10.2rem;
+}
+
+.navbar_menu {
+    position: absolute;
+    top: 8.5rem;
+    right: 1.5rem;
+    width: 23rem;
+    padding: 2rem;
+    background-color: var(--color-1);
+    z-index: 999;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .25s ease-in-out;
+    border-radius: 8%;
+}
+
+.navbar_menu.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.navbar_list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: bold;
+}
+
+.navbar_menu>.navbar_list {
+    flex-direction: column;
+}
+
+.navbar_list-link {
+    color: var(--color-5);
+    transition: opacity .25s;
+}
+
+.navbar_list-link:hover,
+.navbar_list-link:focus {
+    opacity: 0.6;
+}
+
+.navbar_list-item {
+    text-transform: uppercase;
+}
+
+.close-icon {
+    display: none;
+}
+
+.btn {
+    margin: 1.5rem;
+    display: inline-block;
+    font-size: 2.3rem;
+    color: var(--color-7);
+    cursor: pointer;
+    transition: opacity 0.25s;
+}
+
+.btn:hover {
+    opacity: 0.5;
+}
+
+.menu-toggle-icon.active .menu-icon {
+    display: none;
+}
+
+.menu-toggle-icon.active .close-icon {
+    display: block;
+}
+
+
+/* Main */
+
+.main {
+    overflow-x: hidden;
+    ;
+}
+
+
+/* Home */
+
+.title-main {
+    font-size: clamp(4.2rem, 8vw, 6.5rem);
+    line-height: 1.2;
+    z-index: 10;
+    position: relative;
+}
+
+.home {
+    padding-top: 14.5rem;
+    padding-bottom: 0rem;
+}
+
+.home_container {
+    text-align: center;
+}
+
+.home_image {
+    display: inline-block;
+    transform: translateY(-3rem);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.subtitle-main {
+    transform: translateY(-4rem);
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+
+/* About Me */
+
+.aboutme {
+    padding: 10rem 2rem 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading-group {
+    color: var(--color-5);
+    margin-bottom: 3rem;
+}
+
+.title-small {
+    display: block;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+}
+
+.title-large {
+    text-transform: uppercase;
+}
+
+.aboutme-description {
+    letter-spacing: 0.6px;
+    text-align: justify;
+}
+
+.tech-stack {
+    max-width: 50rem;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tech-stack-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tech-stack-item i {
+    font-size: 3.5rem;
+    color: var(--color-7);
+    opacity: 0.5;
+    transition: transform 0.5s;
+}
+
+.tech-stack-item i:hover {
+    transform: translateY(-0.8rem);
+}
+
+
+/* Recent Projects */
+
+.recent-projects {
+    padding: 10rem 2rem 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-cards {
+    gap: 2.5rem;
+}
+
+.card-image {
+    height: 30rem;
+    background-color: var(--color-2);
+    margin-bottom: 2.5rem;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.portfolio-card:hover .card-image,
+.portfolio-card:focus .card-image {
+    background-color: var(--color-4);
+}
+
+.card-heading {
+    color: var(--color-6);
+}
+
+.card-title {
+    font-size: 1.7rem;
+}
+
+.card-subtitle {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
+
+
+/* Contact Me */
+
+.contactme {
+    padding: 10rem 2rem 12rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactme-description {
+    letter-spacing: 0.6px;
+    text-align: center;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5rem;
+    gap: 2rem;
+}
+
+.btn-text {
+    font-family: var(--title-font);
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0.5rem 2rem;
+}
+
+.btn-transparent {
+    color: var(--color-6);
+    border: 2px solid var(--color-4);
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: var(--color-1);
+    padding-bottom: 3rem;
+}
+
+.footer-group {
+    text-align: center;
+}
+
+.footer_logo {
+    display: inline-block;
+    margin-top: 5rem;
+}
+
+.footer-description {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.footer_list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.footer_list-link {
+    color: var(--color-5);
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.25s;
+}
+
+.footer_list-link:hover {
+    opacity: 0.6;
+}
+
+.footer-copyright {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-5);
+}
+
+
+/* Media Queries */
+
+
+/* (Phones) */
+
+@media (min-width: 31.25em) {
+    .container {
+        max-width: 50rem;
+    }
+}
+
+
+/* (Tablets) */
+
+@media (min-width: 48em) {
+    body {
+        font-size: 1.6rem;
+    }
+    .container {
+        max-width: 76.8rem;
+    }
+    #menu-toggle-icon {
+        display: none;
+    }
+    .navbar_menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        top: 50%;
+        opacity: 1;
+        background-color: transparent;
+        transform: scale(1);
+        transition: none;
+    }
+    .navbar_menu>.navbar_list {
+        flex-direction: row;
+        gap: 1.5rem;
+        font-size: 1.5rem;
+    }
+    .footer-description {
+        max-width: 50rem;
+        margin-inline: auto;
+    }
+    .portfolio-cards {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .portfolio-card-1 {
+        grid-column: 1/5;
+        grid-row: 1/span 10;
+    }
+    .portfolio-card-2 {
+        grid-column: 5/-1;
+        grid-row: 1/span 10;
+    }
+    .portfolio-card-3 {
+        grid-column: 1/4;
+        grid-row: 11/span 10;
+    }
+    .portfolio-card-4 {
+        grid-column: 6/-1;
+        grid-row: 11/span 10;
+    }
+    .portfolio-card-5 {
+        grid-column: 6/4;
+        grid-row: 11/span 10;
+    }
+}
+
+
+/* (Laptops & PCs) */
+
+@media (min-width: 64em) {
+    .container {
+        max-width: 90rem;
+    }
+}
