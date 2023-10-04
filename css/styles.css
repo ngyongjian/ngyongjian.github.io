@@ -487,28 +487,45 @@ button {
         max-width: 50rem;
         margin-inline: auto;
     }
+
     .portfolio-cards {
-        grid-template-columns: repeat(8, 1fr);
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
     }
+
     .portfolio-card-1 {
         grid-column: 1/5;
-        grid-row: 1/span 10;
+        grid-row: 1 span 10;
     }
+
     .portfolio-card-2 {
         grid-column: 5/-1;
-        grid-row: 1/span 10;
+        grid-row: 1 span 10;
     }
+
     .portfolio-card-3 {
-        grid-column: 1/4;
-        grid-row: 11/span 10;
+        grid-column: 1/7;
+        grid-row: 11 span 10;
     }
+
     .portfolio-card-4 {
-        grid-column: 6/-1;
-        grid-row: 11/span 10;
+        grid-column: 7/-1;
+        grid-row: 11 span 10;
     }
+
     .portfolio-card-5 {
-        grid-column: 6/4;
-        grid-row: 11/span 10;
+        grid-column: 1/4;
+        grid-row: 21 span 10;
+    }
+
+    .portfolio-card-6 {
+        grid-column: 4/8;
+        grid-row: 21 span 10;
+    }
+
+    .portfolio-card-7 {
+        grid-column: 8/-1;
+        grid-row: 21 span 10;
     }
 }
 

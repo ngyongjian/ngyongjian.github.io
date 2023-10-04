@@ -42,11 +42,11 @@ sr.reveal('.home_title, .home_image, .home_subtitle, .heading-group, .aboutme-de
     interval: 250
 });
 
-sr.reveal('.portfolio-card-1, .portfolio-card-3, .portfolio-card-5', {
+sr.reveal('.portfolio-card-1, .portfolio-card-3, .portfolio-card-5, .portfolio-card-7', {
     origin: 'left',
 });
 
-sr.reveal('.portfolio-card-2, .portfolio-card-4', {
+sr.reveal('.portfolio-card-2, .portfolio-card-4, .portfolio-card-6', {
     origin: 'right',
 });
 
